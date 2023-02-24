@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#Create a script that uses an if statement
+n=1
+while [ $n -le 10 ]
+do
+    echo "Best School"
+    if [ $n -eq 9 ]
+    then
+	echo "Hi"
+    fi
+    ((n++))
+done
