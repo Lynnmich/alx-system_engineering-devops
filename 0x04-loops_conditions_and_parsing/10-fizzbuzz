@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # FizzBuzz algorithm - shell script
-for n in {1..100}
+for((n=1;n<=100;n++))
 do
-    if [ $((n % 3)) -eq 0 ] && [ $((n % 5)) -eq 0 ]
+	if ((n % 15 == 0))
     then
 	    echo "FizzBuzz"
-    elif [ $((n % 3)) -eq 0 ]
+    elif ((n % 3 == 0))
     then
 	    echo "Fizz"
-    elif [ $((n % 5)) -eq 0 ]
+    elif ((n % 5 ==0))
     then
 	    echo "Buzz"
     else
