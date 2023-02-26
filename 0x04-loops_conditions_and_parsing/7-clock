@@ -8,7 +8,7 @@ do
     while [ $minutes -lt 60 ]
     do
 	echo "$minutes"
-	((minutes++))
+	((minutes=minutes+1))
     done
-    ((hour++))
+    ((hour=hour+1))
 done
