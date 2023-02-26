@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Create a script that lists files
-for n in *
+for filen in *;
 do
-    echo "$n" | cut -f 2- -d '-'
+    echo "$filen" | cut -d'-' -f2
 done
