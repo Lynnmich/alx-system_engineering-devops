@@ -1,4 +1,4 @@
-i#!/usr/bin/env bash
+#!/usr/bin/env bash
 #Create a script that uses if, else if and else statements
 n=1
 while [ $n -le 10 ]
@@ -12,5 +12,5 @@ do
        	else
 	    echo "Best School"
 	fi
-	((n++))
+	((n=n+1))
 done
