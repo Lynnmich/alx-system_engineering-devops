@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #Creating a script that uses an until loop
-n=0
-until [ $n -gt 9 ]
+n=10
+until [ $n -lt 1 ]
 do
 	echo "Best School"
-	((n++))
+	((n=n-1))
 done
