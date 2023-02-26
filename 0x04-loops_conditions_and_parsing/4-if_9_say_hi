@@ -8,5 +8,5 @@ do
     then
 	echo "Hi"
     fi
-    ((n++))
+    ((n=n+1))
 done
