@@ -14,6 +14,7 @@ This project covers designing:
 - A three server web infrastructure that hosts the  website www.foobar.com
 - A three server web infrastructure that hosts the website www.foobar.com, it must be secured, serve encrypted traffic, and be monitored
 
+
 ## 0. One Server Setup.
 This is when an entire environment resides on a single server. This includes the web server, the application server and the database server.
 
@@ -35,6 +36,7 @@ It handles  the HTTP protocol.When it receives a HTTP request, it responds with 
 1. Poor performance since the application and the database contend for the same server resources ie: CPU, memory.
 2. This infrastructure offers little in the way of scalability and component isolation. Using one server isn't horizontally scalable because it can quickly become slow once it starts receiving alot of requests.
 3. SPOF- If the database(MySQL)is down, then the entire site would be down.
+
 
 ## 1. Distributed Web Infrastructure
 This is a distributed web infrastructure that is designed in an attempt to reduce traffic to the primary server by distributing some of the traffic to the replica server with the aid of a loadbalancer.
@@ -60,6 +62,7 @@ Primary-Replica replication can be either synchronous or asynchronous. The diffe
 1. SPOF- If the primary MySQL database server is down, then the entire site would be down.
 2. Write operations to primary are hard to scale - Write requests to primary can hardly be scaled. One of the only few options to scale the writing requests is to increase the compute capacity(CPU and ROM) of the primary database.
 3. The data being transmitted isn't encrypted using an SSL certificate making it easier for unauthorized access to the network. unauthorized IP addresses can't be blocked since no firewalls have been setup on the servers.
+
 
 ## 2. Secured and Monitored Web Infrastructure
 This is a secured and monitored web infrastructure that is designed to monitor network traffic,encrpt HTTP requests and responses and attempt to reduce traffic to the primary server by distributing some of the traffic to the replica server with the aid of a loadbalancer.
@@ -99,7 +102,7 @@ Network monitoring tools are another option for monitoring web server QPS. These
 - Using Application Performance Monitoring Tools
 Application performance monitoring tools are another option for monitoring web server QPS. These tools are designed to monitor the performance of the web server applications and provide detailed information about the performance of the web server. Popular application performance monitoring tools for monitoring web server QPS include AppDynamics, New Relic, and Dynatrace. These tools are designed to handle large-scale monitoring and provide detailed information about the performance of the web server. However, they may require additional training to use and may be more expensive than open source tools and cloud-based solutions.
 
-###Issues with this Infrastructure
+### Issues with this Infrastructure
 1. SPOF- Having one MySQL server is an issue since its not scalable.
 2. If the SSL was to be terminated; this would leave the traffic between the load balancer and the servers unencrypted.
 
