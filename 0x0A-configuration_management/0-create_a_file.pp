@@ -1,4 +1,4 @@
-# create a file in /tmp with specific requirements
+# Puppet manifest that creates a file in /tmp with the specified requirements
 
 file { 'school':
   path    => '/tmp/school',
