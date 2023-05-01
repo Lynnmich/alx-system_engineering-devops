@@ -9,7 +9,7 @@ sudo apt-get install -y nginx
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
 # Configure nginx to listen on port 80 and redirect /redirect_me
-sudo sed -i '41i\rewrite ^/redirect_me https://github.com permanent;' /etc/nginx/sites-enabled/default
+sudo sed -i '4ii\rewrite^/redirect_me https://github.com permanent;' /etc/sites-enabled/default
 
 # Restart nginx
 sudo service nginx restart
