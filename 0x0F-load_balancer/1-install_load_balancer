@@ -5,7 +5,7 @@
 sudo apt-get update
 
 # Install haproxy
-sudo apt-get -y install haproxy
+sudo apt-get install -y haproxy
 
 # Configure haproxy to loadbalance between the 2 servers
 sudo "echo '
@@ -20,7 +20,7 @@ backend http_back
 ' >> /etc/haproxy/haproxy.cfg"
 
 # Enable haproxy to be managed by init script
-sudo sed -i "ENABLED=1" /etc/default/haproxy
+sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
 
 # Restart haproxy
 sudo service haproxy restart
