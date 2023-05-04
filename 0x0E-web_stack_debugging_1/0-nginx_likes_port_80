@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# A script with the minimum number of commands to automate my fix.
+
+# Update and install Nginx
+sudo apt-get update
+
+sudo apt-get install -y nginx
+
+# Check Nginx status
+sudo service nginx status
+
+# Modify Nginx config file to listen to port 80
+rm /etc/nginx/sites-enabled/default
+
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+# Restart Nginx
+sudo service nginx restart
