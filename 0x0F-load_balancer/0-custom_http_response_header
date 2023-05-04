@@ -24,7 +24,7 @@ sudo sed -i "41i\rewrite ^/redirect_me https://github.com permanent;" /etc/nginx
 sudo sed -i "30i \\\terror_page 404 /error_404.html;" /etc/nginx/sites-enabled/default
 
 # Custom HTTP header
-sudo sed -i "s\\\tadd_header X-Served-By $(hostname);" /etc/nginx/sites-enabled/default
+sudo sed -i "\\\tadd_header X-Served-By $(hostname);" /etc/nginx/sites-enabled/default
 
 # Restart Nginx
 sudo service nginx restart
