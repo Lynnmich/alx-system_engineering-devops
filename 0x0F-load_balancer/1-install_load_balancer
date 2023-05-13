@@ -17,8 +17,8 @@ echo "
    balance roundrobin
    option http-keep-alive
    option forwardfor
-   server 12682-web-01 16.206.207.138:80 check
-   server 12682-web-02 52.23.179.13:80 check
+   server 12682-web-01 54.90.37.210:80 check
+   server 12682-web-02 	100.25.137.138:80 check
 " >> /etc/haproxy/haproxy.cfg
 
 # Restart haproxy
