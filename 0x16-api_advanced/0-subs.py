@@ -6,6 +6,7 @@ returns the number of subscribers for a given subreddit
 
 import requests
 
+
 def number_of_subscribers(subreddit):
     """
     Function that returns number of subscribers of a subreddit passed
@@ -13,7 +14,7 @@ def number_of_subscribers(subreddit):
     Args: 
         subreddit (str): The name of the subreddit
     """
-    url = f"https://www.reddit.com/r/{subreddit}/about.json"
+    url = f"https://www.reddit.com/r/{}/about.json"
     user_agent = "Mozilla/5.0"
 
     response = requests.get(url, headers={'User-Agent': user_agent})

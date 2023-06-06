@@ -13,7 +13,7 @@ def top_ten(subreddit):
 
     Limit the number of posts to 10
     """
-    url = f"https://www.reddit.com/r/{subreddit}/hot.json"
+    url = f"https://www.reddit.com/r/{}/hot.json"
     headers = {'User-Agent': 'Mozilla/5.0'}
     params = {'limit': 10}
 
