@@ -11,9 +11,9 @@ def number_of_subscribers(subreddit):
     """Function that returns number of subscribers of a subreddit passed"""
 
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    user_agent = "Mozilla/5.0"
+    User-Agent = "Mozilla/5.0"
 
-    response = requests.get(url, headers=user_agent)
+    response = requests.get(url, headers=User_Agent)
 
     if response.status_code == 200:
         data = response.json()
