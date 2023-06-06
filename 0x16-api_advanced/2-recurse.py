@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Queries the Reddit API and returns a list of titles of all
-hot articles for a given subreddit.
+Queries the Reddit API and returns a list of titles of all hot articles for a given subreddit.
 """
 import requests
 
@@ -13,9 +12,7 @@ def recurse(subreddit, hot_list=[], after=None):
     """
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)
-        AppleWebKit/537.36 (KHTML, like Gecko)
-        Chrome/58.0.3029.110 Safari/537.3"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
     }
     params = {"limit": 100, "after": after}
     response = requests.get(url, headers=headers,
