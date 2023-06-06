@@ -10,21 +10,18 @@ import requests
 def top_ten(subreddit):
     """
     Function that prints the title of the first 10 listed posts
-
-    Limit the number of posts to 10
     """
-    url = f"https://www.reddit.com/r/{}/hot.json"
-    headers = {'User-Agent': 'Mozilla/5.0'}
-    params = {'limit': 10}
+    url = "https://reddit.com/r/{}/hot.json".format(subreddit)
+    user_agent = "Mozilla/5.0"
+    limits = 10
 
-    response = requests.get(url, headers=headers, params=params)
-
-    if response.status_code == 200:
-        data = response.json()
-        posts = data['data']['children']
-
-        for post in posts:
-            title = post['data']['title']
-            print(title)
-    else:
-        print(None)
+    response = requests.get(
+        url, headers={"user-agent": user_agent}, params={"limit": limits})
+    if not response:
+        print('None')
+        return
+    response = response.json()
+    posts = response['data']['children']
+    for post in posts:
+        print(post['data']['title'])
+    return
