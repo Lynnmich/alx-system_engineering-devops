@@ -11,6 +11,7 @@ def top_ten(subreddit):
     """
     Function that prints the title of the first 10 listed posts
     """
+<<<<<<< HEAD
     url = "https://reddit.com/r/{}/hot.json".format(subreddit)
     user_agent = "Mozilla/5.0"
     limits = 10
