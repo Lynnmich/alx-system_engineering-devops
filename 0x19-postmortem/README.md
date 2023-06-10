@@ -7,21 +7,33 @@ Impact: Mobile payment service was unavailable for all users during the outage, 
 ## Timeline:
 
 10:00 AM: Issue detected through monitoring alerts indicating a sudden drop in transaction requests.
+
 Investigation initiated to identify the root cause of the problem.
 Assumed initial root cause: Network connectivity issues between the mobile app and the payment gateway.
+
 10:30 AM: Network connectivity was ruled out as the root cause after network monitoring showed no anomalies.
+
 Misleading investigation path: Application code was suspected to have introduced a bug causing transaction failures.
+
 Development team was escalated to investigate the application code for potential issues.
+
 12:00 PM: Development team discovered no coding errors or issues in the application codebase.
+
 Escalated incident to the infrastructure team for further investigation.
+
 2:00 PM: Infrastructure team identified an abnormal increase in database read/write latencies.
+
 Misleading investigation path: Database server hardware was initially suspected to be the cause of high latencies.
+
 3:00 PM: Database server hardware was ruled out as the root cause after conducting hardware diagnostics.
 Escalated incident to the database administration team.
+
 4:00 PM: Database administration team identified a misconfiguration in the database connection pool settings.
 Misconfiguration was causing excessive connection timeouts and delays in transaction processing.
+
 6:00 PM: Database connection pool settings were corrected, and the mobile payment service was restored.
 Root cause: Misconfiguration in the database connection pool settings leading to transaction delays and timeouts.
+
 Resolution: Corrected the misconfiguration by adjusting the database connection pool settings.
 
 ## Root Cause and Resolution:
@@ -41,8 +53,11 @@ Regular testing and validation: Establish a routine testing and validation proce
 ## Tasks to Address the Issue:
 
 Review and update database connection pool configurations to align with best practices.
+
 Conduct a comprehensive review of the application codebase to ensure it is resilient to database connection timeouts and failures.
+
 Enhance database monitoring to capture detailed performance metrics.
+
 Conduct regular drills and incident response exercises to improve coordination and response time during critical incidents.
 
 By implementing these corrective and preventative measures, we aim to enhance the stability and reliability of our mobile payment platform, minimizing the impact on users and ensuring seamless transaction processing.
