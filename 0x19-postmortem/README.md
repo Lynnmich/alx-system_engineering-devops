@@ -1,7 +1,9 @@
+![prog_img](https://github.com/Lynnmich/alx-system_engineering-devops/assets/99338832/22745175-6bee-4fda-96a5-358d3b6283bc)
+
 # Title: Postmortem: Service Outage in Mobile Payment Platform
 
 ## Issue Summary:
-Duration: June 8, 2023, 10:00 AM - June 9, 2023, 1:00 AM (UTC)
+Duration: June 8, 2023, 10:00 AM - June 9, 2023, 1:00 AM 
 Impact: Mobile payment service was unavailable for all users during the outage, resulting in the inability to complete transactions. Approximately 75% of users were affected, leading to significant customer dissatisfaction.
 
 ## Timeline:
