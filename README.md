@@ -1,6 +1,6 @@
-**# ALX System Engineering & DevOps Projects Overview**
+# ALX System Engineering & DevOps Projects Overview
 
-### This repository encompassed a comprehensive collection of projects focused on system engineering and DevOps. Each project explored a specific aspect of these fields, providing valuable insights and hands-on experience. Here's a brief summary of the projects:
+### This repository encompasses a comprehensive collection of projects focused on system engineering and DevOps. Each project explored a specific aspect of these fields, providing valuable insights and hands-on experience. Here's a brief summary of the projects:
 
 **Shell Basics:** Introduced fundamental shell concepts and commands.
 
